@@ -1,22 +1,29 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Instagram 회원가입</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-<link rel="stylesheet" href="/static/css/style.css">
-</head>
-<body>
-
-	<div id="wrap">
-		<header class="d-flex justify-content-center">
-			<img width="200" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png">
-		</header>
-		<section class="contents"></section>
-		<footer class="d-flex justify-content-center">
-			<div>Copyright 2025. Memo All rights reserved.</div>
-		</footer>
-	</div>
-
-</body>
+<html xmlns:th="http://www.thymeleaf.org" 
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{layouts/default}">
+		<section layout:fragment="contents" class="contents d-flex justify-content-center">
+			<div class="outer-box">
+				<div class="box1 border p-4">
+					<div class="d-flex justify-content-center my-1">
+						<img width="200" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png">
+					</div>
+					<div class="text-secondary text-center font-weight-bold">친구들의 사진과 동영상을 보려면 가입하세요.</div>
+					<div class="d-flex justify-content-between mt-3">
+						<input type="text" class="form-control col-7" placeholder="사용자 이름">
+						<button type="button" class="btn btn-block btn-primary col-4">중복확인</button>
+					</div>
+					<input type="password" class="form-control mt-2" placeholder="비밀번호">
+					<input type="password" class="form-control mt-2" placeholder="비밀번호 확인">
+					<input type="text" class="form-control mt-2" placeholder="성명">
+					<input type="text" class="form-control mt-2" placeholder="이메일 주소">
+					<div class="text-secondary text-center small mt-3">저희 서비스를 이용하는 사람이 회원님의 연락처 정보를 Instagram에 업로드했을 수도 있습니다. <a href="#">더 알아보기</a></div>
+					<button type="button" class="btn btn-block btn-primary mt-3">가입</button>
+				</div>
+				<div class="box2 border mt-2 p-4">
+					<div class="text-center">계정이 있으신가요?</div>
+					<div class="text-center"><a href="/user/login-view">로그인</a></div>
+				</div>
+			</div>
+		</section>
 </html>

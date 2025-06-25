@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{layouts/default}">
+		<section layout:fragment="contents" class="contents d-flex justify-content-center">
+			<div class="outer-box">
+				<div class="box1 border p-4">
+					<div class="d-flex justify-content-center my-1">
+						<img width="200" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png">
+					</div>
+					<input type="text" class="form-control" placeholder="사용자 이름">
+					<input type="password" class="form-control mt-2" placeholder="비밀번호">
+					<button type="button" class="btn btn-block btn-primary mt-3">로그인</button>
+				</div>
+				<div class="box2 border mt-2 p-4 d-flex justify-content-center">
+					<div>계정이 없으신가요?<a href="/user/join-view" class="ml-1">가입하기</a></div>
+				</div>
+			</div>
+		</section>
+</html>
