@@ -10,14 +10,13 @@
 <body>
 
 	<div id="wrap">
-		<header class="d-flex justify-content-center align-items-center">
-			<img width="200" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png">
-		</header>
+		<th:block th:replace="~{fragments/header}"></th:block>
 		<th:block layout:fragment="contents"></th:block>
-		<footer class="d-flex justify-content-center align-items-center">
-			<div class="text-secondary">Copyright 2025. Instagram All rights reserved.</div>
-		</footer>
+		<th:block th:replace="fragments/footer"></th:block>
 	</div>
+	
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<th:block layout:fragment="script"></th:block>
 
 </body>
 </html>
