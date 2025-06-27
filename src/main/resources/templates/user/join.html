@@ -30,7 +30,14 @@
 		
 		<script layout:fragment="script">
 		
-		var checkDuplicateId = null;
+			var checkDuplicateId = null;
+			
+			$("#idInput").on("input", function() {
+				checkDuplicateId = null;
+				$("#availableText").addClass("d-none");
+				$("#duplicateText").addClass("d-none");
+			});
+			
 			$("#duplicateBtn").on("click", function () {
 				let id = $("#idInput").val();
 				if(id == "") {
