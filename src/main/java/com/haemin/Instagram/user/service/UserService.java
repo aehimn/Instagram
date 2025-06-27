@@ -3,6 +3,7 @@ package com.haemin.Instagram.user.service;
 import org.springframework.stereotype.Service;
 
 import com.haemin.Instagram.common.SHA256HashingEncoder;
+import com.haemin.Instagram.user.domain.User;
 import com.haemin.Instagram.user.repository.UserRepository;
 
 @Service
@@ -38,6 +39,14 @@ public class UserService {
 		} else {
 			return true;
 		}
+	}
+	
+	public User getUser(String loginId, String password) {
+		
+		String hashingPassword = SHA256HashingEncoder.encode(password);
+		
+		return userRepository.selectUser(loginId, hashingPassword);
+		
 	}
 	
 }
