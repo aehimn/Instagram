@@ -1,10 +1,10 @@
-<html xmlns:th="http://www.thymeleaf.org" 
+<html xmlns:th="http://www.thymeleaf.org"
         xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
         layout:decorate="~{layouts/default}">
 		<section layout:fragment="contents" class="contents d-flex justify-content-center">
-			<div class="outer-box">
-				<div class="box1 border p-4">
-					<div class="d-flex justify-content-center my-1">
+			<div>
+				<div class="box border p-4">
+					<div class="d-flex justify-content-center my-3">
 						<img width="200" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png">
 					</div>
 					<div class="text-secondary text-center font-weight-bold">친구들의 사진과 동영상을 보려면 가입하세요.</div>
@@ -20,9 +20,9 @@
 					<input type="text" class="form-control mt-2" id="emailInput" placeholder="이메일 주소">
 					<button type="button" class="btn btn-block btn-primary mt-3" id="joinBtn">가입</button>
 				</div>
-				<div class="box2 border mt-2 p-3">
+				<div class="box border mt-2 p-3">
 					<div class="text-center">계정이 있으신가요?</div>
-					<div class="text-center"><a href="/user/login-view">로그인</a></div>
+					<div class="text-center"><a href="/user/login-view" class="font-weight-bold">로그인</a></div>
 				</div>
 			</div>
 		</section>

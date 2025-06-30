@@ -1,24 +1,28 @@
-<html xmlns:th="http://www.thymeleaf.org" 
+<html xmlns:th="http://www.thymeleaf.org"
         xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
         layout:decorate="~{layouts/default}">
 		<section layout:fragment="contents" class="contents d-flex justify-content-center">
-			<div class="outer-box">
-				<div class="box1 border p-4">
-					<div class="d-flex justify-content-center my-1">
+			<div>
+				<div class="box border p-4">
+					<div class="d-flex justify-content-center my-3">
 						<img width="200" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png">
 					</div>
-					<input type="text" class="form-control" id="idInput" placeholder="사용자 이름">
-					<input type="password" class="form-control mt-2" id="passwordInput" placeholder="비밀번호">
-					<button type="button" class="btn btn-block btn-primary mt-3" id="loginBtn">로그인</button>
+					<form id="loginForm">
+						<input type="text" class="form-control" id="idInput" placeholder="사용자 이름">
+						<input type="password" class="form-control mt-2" id="passwordInput" placeholder="비밀번호">
+						<button type="submit" class="btn btn-block btn-primary mt-3" id="loginBtn">로그인</button>
+					</form>
 				</div>
-				<div class="box2 border mt-2 p-3 d-flex justify-content-center">
-					<div>계정이 없으신가요?<a href="/user/join-view" class="ml-1">가입하기</a></div>
+				<div class="box border mt-2 p-3 d-flex justify-content-center">
+					<div>계정이 없으신가요?<a href="/user/join-view" class="ml-1 font-weight-bold">가입하기</a></div>
 				</div>
 			</div>
 		</section>
 		
 		<script layout:fragment="script">
-			$("#loginBtn").on("click", function() {
+			$("#loginForm").on("submit", function(e) {
+				// form 태그 원래의 기능을 제거
+				e.preventDefault();
 				
 				let id = $("#idInput").val();
 				let password = $("#passwordInput").val();

@@ -9,12 +9,7 @@ header {
 	height: 100px;
 }
 
-
-.outer-box > .box1 {
-	width: 350px;
-}
-
-.outer-box > .box2 {
+.box {
 	width: 350px;
 }
 

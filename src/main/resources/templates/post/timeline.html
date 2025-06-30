@@ -1,9 +1,29 @@
-<html xmlns:th="http://www.thymeleaf.org" 
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{layouts/default}">
-      
-      <section layout:fragment="contents">
-      	<h1>타임라인</h1>
-      </section>
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Instagram</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
 
+	<div id="wrap" class="bg-success d-flex justify-content-between">
+		<div class="logo d-flex">
+			<div class="m-3">
+				<img width="200" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png">
+			</div>
+			<div style="border-left: 1px solid gray;"></div>
+		</div>
+		<section class="contents">
+      		<div class="border border-secondary p-4">
+      			<img width="400" src="https://cdn.pixabay.com/photo/2015/09/05/23/54/ice-cream-926426_1280.jpg">
+      		</div>
+		</section>
+		<div class="user font-weight-bold">
+			<span th:text="${session.userLoginId}">user</span> <a href="/user/logout">로그아웃</a>
+		</div>
+	</div>
+
+</body>
 </html>
