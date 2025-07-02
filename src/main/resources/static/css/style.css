@@ -9,8 +9,16 @@ header {
 	height: 100px;
 }
 
+.logo {
+	width: 250px;
+}
+
 .box {
 	width: 350px;
+}
+
+.user {
+	width: 250px;
 }
 
 footer {
