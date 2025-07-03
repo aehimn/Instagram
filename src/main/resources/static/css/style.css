@@ -9,18 +9,15 @@ header {
 	height: 100px;
 }
 
-.logo {
-	width: 250px;
+footer {
+	height: 100px;
 }
 
 .box {
 	width: 350px;
 }
 
-.user {
-	width: 250px;
-}
-
-footer {
-	height: 100px;
+.no-border {
+	border: 0;
+    box-shadow: none;
 }

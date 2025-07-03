@@ -1,3 +1,10 @@
-		<header class="d-flex justify-content-center align-items-center">
+		<header class="d-flex justify-content-around align-items-center">
 			<img width="200" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png">
+			<div class="user" th:if="${session.userLoginId != null}">
+				<div class="d-flex align-items-center font-weight-bold">
+					<i class="h1 m-0 bi bi-person-circle"></i>
+					<span class="ml-2" th:text="${session.userLoginId}">user</span>
+					<a class="ml-2" href="/user/logout">로그아웃</a>
+				</div>
+			</div>
 		</header>
